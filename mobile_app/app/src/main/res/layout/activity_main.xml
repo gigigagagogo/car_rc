@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient_landscape"
+    tools:context=".MainActivity">
+
+    <!-- Titolo centrale in alto -->
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:letterSpacing="0.05"
+        android:text="@string/title_rc_car_controller"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Indicatore di stato connessione -->
+
+    <!-- LATO SINISTRO: SINISTRA e DESTRA affiancati -->
+    <LinearLayout
+        android:id="@+id/leftControls"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/centerDivider"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.601"
+        app:layout_constraintWidth_percent="0.5">
+
+        <!-- Pulsante SINISTRA -->
+        <Button
+            android:id="@+id/btnLeft"
+            style="@style/ControlButtonLarge"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginEnd="30dp"
+            android:backgroundTint="@color/control_orange"
+            android:foreground="@drawable/button_pressed_effect"
+            android:gravity="center"
+            android:text="@string/arrow_left"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="42sp"
+            android:textStyle="bold" />
+
+        <!-- Pulsante DESTRA -->
+        <Button
+            android:id="@+id/btnRight"
+            style="@style/ControlButtonLarge"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="30dp"
+            android:backgroundTint="@color/control_orange"
+            android:foreground="@drawable/button_pressed_effect"
+            android:gravity="center"
+            android:text="@string/arrow_right"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="42sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!-- LATO DESTRO: AVANTI e INDIETRO uno sopra l'altro -->
+    <LinearLayout
+        android:id="@+id/rightControls"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/centerDivider"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.824"
+        app:layout_constraintWidth_percent="0.5">
+
+        <!-- Pulsante AVANTI -->
+        <Button
+            android:id="@+id/btnForward"
+            style="@style/ControlButtonLarge"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginBottom="40dp"
+            android:backgroundTint="@color/control_green"
+            android:foreground="@drawable/button_pressed_effect"
+            android:gravity="center"
+            android:text="@string/arrow_up"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="42sp"
+            android:textStyle="bold" />
+
+        <!-- Pulsante INDIETRO -->
+        <Button
+            android:id="@+id/btnBackward"
+            style="@style/ControlButtonLarge"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:backgroundTint="@color/control_green"
+            android:foreground="@drawable/button_pressed_effect"
+            android:gravity="center"
+            android:text="@string/arrow_down"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="42sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!-- Linea divisoria decorativa centrale -->
+    <View
+        android:id="@+id/centerDivider"
+        android:layout_width="2dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="40dp"
+        android:background="@color/divider_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">RC Car Controller</string>
+    <string name="title_rc_car_controller">RC Car Controller</string>
+    <!-- Usa questi caratteri che si centrano meglio -->
+    <string name="arrow_left">◀</string>
+    <string name="arrow_right">▶</string>
+    <string name="arrow_up">▲</string>
+    <string name="arrow_down">▼</string>
+</resources>
