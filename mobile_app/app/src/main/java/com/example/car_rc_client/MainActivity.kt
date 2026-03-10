@@ -78,7 +78,7 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        esp32 = Esp32Client("192.168.1.100", 3333)
+        esp32 = Esp32Client("10.87.202.50", 3333)
         esp32.connect(
             onConnected = {
                 runOnUiThread {
